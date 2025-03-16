@@ -4,39 +4,82 @@ type: repo
 agent: CodeActAgent
 ---
 
-Repository: <-- REPLACE -->
+Repository: e-jigsaw/code-quiz
 
-Description: <-- REPLACE -->
+Description: A web application that displays random notes (A-G) at a specified BPM to help with code memorization and practice.
 
 Directory Structure:
 
 - src/: Main application source code
+  - components/: React components
+    - CodeQuiz.tsx: Main component with note generation logic
+  - App.tsx: Root component with BPM control
+  - main.tsx: Application entry point
+  - vite-env.d.ts: Vite type declarations
 
 Setup:
 
-- To set up the project, run `pnpm install` to install the dependencies.
-- `pnpm dev` for development.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/e-jigsaw/code-quiz.git
+   cd code-quiz
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Start development server:
+   ```bash
+   pnpm dev
+   ```
 
 Commands:
 
-- `pnpm install`: Installs dependencies.
-- `pnpm dev`: Starts the local development server.
-- `pnpm build`: Builds the production site.
-- `pnpm preview`: Preview the production build locally.
-- `pnpm lint`: Run ESLint for code linting.
+- `pnpm install`: Installs project dependencies
+- `pnpm dev`: Starts the development server (uses port from runtime info)
+- `pnpm build`: Creates optimized production build
+- `pnpm preview`: Serves the production build locally
+- `pnpm lint`: Runs ESLint to check code quality
+- `pnpm format`: Formats code using Prettier
 
 Technologies:
 
-- React 18
-- TypeScript
-- Vite
-- TailwindCSS
-- ESLint
+- React 18: Modern UI library for building interactive interfaces
+- TypeScript: Adds static typing to JavaScript for better development experience
+- Vite: Fast and modern build tool and development server
+- TailwindCSS: Utility-first CSS framework for rapid UI development
+- ESLint: Code linting for maintaining code quality
+- Prettier: Code formatting tool
 
-Guidelines:
+Features:
 
-- The project uses TypeScript for type safety.
-- TailwindCSS is used for styling.
-- ESLint is configured for code quality.
-- When running `pnpm dev`, use the specified port from the runtime information.
-- Before creating a pull request, document session changes in `docs/sessions/` following the format in `docs/instruction.md`.
+- Random note generation (A through G)
+- Adjustable BPM (Beats Per Minute)
+- Visual metronome with note display
+- Start/Stop control
+- Responsive design
+
+Development Guidelines:
+
+1. Code Quality:
+   - Use TypeScript for all new code
+   - Follow ESLint rules for consistent code style
+   - Format code using Prettier before committing
+
+2. UI Development:
+   - Use TailwindCSS utility classes for styling
+   - Ensure responsive design works on all screen sizes
+   - Follow accessibility best practices
+
+3. Git Workflow:
+   - Create feature branches for new work
+   - Write clear commit messages
+   - Document changes in `docs/sessions/` before creating PRs
+   - Follow PR template guidelines
+
+4. Server Configuration:
+   - When running `pnpm dev`, use the port from runtime information
+   - Enable CORS and iframe access when needed
+   - Allow connections from any host (0.0.0.0)
