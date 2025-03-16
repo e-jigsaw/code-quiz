@@ -1,4 +1,4 @@
-# Guitar Practice App
+# Code Quiz
 
 A simple web application to help guitarists practice note recognition by displaying random notes (A through G) at a specified tempo.
 
