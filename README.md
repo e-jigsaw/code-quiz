@@ -48,7 +48,7 @@ pnpm preview
 
 ## Development
 
-- `src/components/GuitarPractice.tsx`: Main component with note generation logic
+- `src/components/CodeQuiz.tsx`: Main component with note generation logic
 - `src/App.tsx`: Root component
 - `src/main.tsx`: Entry point
 - TailwindCSS is used for styling

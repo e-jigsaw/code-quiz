@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 
 const notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 
-interface GuitarPracticeProps {
+interface CodeQuizProps {
   bpm: number;
 }
 
-export const GuitarPractice = ({ bpm }: GuitarPracticeProps) => {
+export const CodeQuiz = ({ bpm }: CodeQuizProps) => {
   const [currentNote, setCurrentNote] = useState('');
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -35,7 +35,7 @@ export const GuitarPractice = ({ bpm }: GuitarPracticeProps) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="p-8 bg-white rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold mb-6 text-center">Guitar Practice</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center">Code Quiz</h1>
         <div className="flex flex-col items-center gap-6">
           <div className="text-9xl font-bold text-blue-600 h-40 flex items-center">
             {currentNote || '-'}
