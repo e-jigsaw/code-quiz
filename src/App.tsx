@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GuitarPractice } from './components/GuitarPractice';
+import { CodeQuiz } from './components/CodeQuiz';
 
 function App() {
   const [bpm, setBpm] = useState(60);
@@ -16,7 +16,7 @@ function App() {
           className="w-48"
         />
       </div>
-      <GuitarPractice bpm={bpm} />
+      <CodeQuiz bpm={bpm} />
     </div>
   );
 }
